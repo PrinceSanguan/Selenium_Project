@@ -12,7 +12,7 @@ driver = webdriver.Chrome(service=service)
 driver.get("https://www.facebook.com/")
 
 # Wait for the login page to load
-time.sleep(5)
+driver.implicitly_wait(30)
 
 # Find the username and password input fields and fill them in
 username_field = driver.find_element(By.NAME, "email")
